@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734acf3ad9828e45afcc09e6471c339, type: 3}
+  m_Name: Weaver Settings 1
+  m_EditorClassIdentifier: 
+  _Injection:
+    enableRuntimeInjection: 1
+    showProjectWindowOverlays: 1
+    autoFindAssets: 1
+    logAssetFound: 1
+    catchInjectorExceptions: 1
+    timeInjectorCode: 0
+    logInjectorCode: 0
+    _AssetInjectionData:
+    - _DeclaringType: Weaver.Editor.Icons, Weaver
+      _Member: Instance
+      _Asset: {fileID: 11400000, guid: 2d1dfe17301b52f409559e56148e4e2f, type: 2}
+      _GUID: 2d1dfe17301b52f409559e56148e4e2f
+      _LocalID: 11400000
+    - _DeclaringType: Weaver.Editor.Procedural.AnimationConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: 559d0a5c6bcb3224fac1cb8997bc3f23, type: 3}
+      _GUID: 559d0a5c6bcb3224fac1cb8997bc3f23
+      _LocalID: 11500000
+    - _DeclaringType: Weaver.Editor.Procedural.BuildDetailsScriptBuilder, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: f6639d6a104a84a41840669d1630df40, type: 3}
+      _GUID: f6639d6a104a84a41840669d1630df40
+      _LocalID: 11500000
+    - _DeclaringType: Weaver.Editor.Procedural.InjectorScriptBuilder, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: cf82345c10ff43e4c96aa10f57419b3a, type: 3}
+      _GUID: cf82345c10ff43e4c96aa10f57419b3a
+      _LocalID: 11500000
+    - _DeclaringType: Weaver.Editor.Procedural.LayerConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: 738bf6ace530dde46bbd1dd394c640dd, type: 3}
+      _GUID: 738bf6ace530dde46bbd1dd394c640dd
+      _LocalID: 11500000
+    - _DeclaringType: Weaver.Editor.Procedural.NavigationAreaConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.SceneConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: 1cfe9854518955447b80bf6fba2dc5be, type: 3}
+      _GUID: 1cfe9854518955447b80bf6fba2dc5be
+      _LocalID: 11500000
+    - _DeclaringType: Weaver.Editor.Procedural.ShaderConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.TagConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 11500000, guid: 59d8723a60d351e4ebbcc80cd7895c4e, type: 3}
+      _GUID: 59d8723a60d351e4ebbcc80cd7895c4e
+      _LocalID: 11500000
+  _ProceduralAssets:
+    includeNamespaceInName: 0
+    checkForMissingAssets: 1
+    autoGenerateOnBuild: 1
+    notifyWhenDeletingOldAssets: 0
+    scriptsUseWeaverNamespace: 0
+    autoGenerateScriptsOnSave: 1
+    notifyWhenGeneratingScripts: 0
+    scriptsKeepObsoleteMembers: 1
+    _OutputDirectory: {fileID: 0}
+    _ProceduralAssetData:
+    - _ReferencedAssetInjectionDataIndex: 1
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 4
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 5
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 6
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 7
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 8
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 2
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 3
+      hasSubAssets: 0
+      _DependancyIndices: 
+    _ProceduralAssetListData: []
+  _Animations:
+    enabled: 1
+    notifyOnNewValue: 0
+    createParameterWrappers: 1
+  _Layers:
+    enabled: 1
+    layerNames:
+    - Default
+    - TransparentFX
+    - Ignore Raycast
+    - Water
+    - UI
+    includeLayers: 1
+    includeLayerMasks: 0
+    includeCollisionMatrix2D: 0
+    includeCollisionMatrix3D: 0
+    customMasks: []
+  _NavAreas:
+    enabled: 0
+    layerNames:
+    - Walkable
+    - Not Walkable
+    - Jump
+    includeLayers: 1
+    includeLayerMasks: 0
+    customMasks: []
+  _Scenes:
+    enabled: 1
+    includeSceneIndices: 1
+    includeSceneNames: 1
+    useFullPathNames: 0
+    useNestedClasses: 0
+  _Shaders:
+    enabled: 0
+    shaders: []
+  _Tags:
+    enabled: 1
+  _Window:
+    currentPanel: -1
+    autoDock: UnityEditor.InspectorWindow
+    autoFocus: 1
+  _Dummy: 0

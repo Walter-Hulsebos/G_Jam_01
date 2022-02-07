@@ -200,6 +200,14 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "sc.stylizedwater2": {
+      "version": "file:StylizedWater2",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "7.5.3"
+      }
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

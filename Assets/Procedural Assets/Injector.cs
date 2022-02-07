@@ -12,124 +12,6 @@ namespace Weaver
         [UnityEngine.SerializeField]
         private UnityEngine.Object[] _Objects;
 
-#if ! UNITY_EDITOR // Runtime.
-
-        private void Awake()
-        {
-            // [Weaver.AssetInstance] Weaver.Examples.FrameRate.Instance (Weaver.Examples.FrameRate) { Optional }.
-            try
-            {
-                var obj = _Objects[0];
-                DontDestroyOnLoad(obj);
-                typeof(Weaver.Examples.FrameRate).GetField("Instance", StaticBindings).SetValue(null, obj);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetReference] Weaver.Examples.GameOverScreen.Prefab (Weaver.Asset<Weaver.Examples.GameOverScreen>).
-            try
-            {
-                var asset = new Weaver.Asset<Weaver.Examples.GameOverScreen>("Game Over Screen");
-                typeof(Weaver.Examples.GameOverScreen).GetField("Prefab", StaticBindings).SetValue(null, asset);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.Score.Text (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[1] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.Score).GetField("Text", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.TextManager.ColdDamageText (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[2] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.TextManager).GetField("ColdDamageText", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.TextManager.FireDamageText (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[3] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.TextManager).GetField("FireDamageText", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.TextManager.PhysicalDamageText (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[4] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.TextManager).GetField("PhysicalDamageText", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.TextManager.SpeechText (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[5] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.TextManager).GetField("SpeechText", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-            // [Weaver.AssetPool] Weaver.Examples.TextManager.StatusText (Weaver.ObjectPool<Weaver.Examples.FloatingText>).
-            try
-            {
-                var original = _Objects[6] as Weaver.Examples.FloatingText;
-                var pool = Weaver.ObjectPool.GetSharedComponentPool(original, 0, true);
-                pool.OnRelease = (item) => item.OnRelease();
-                typeof(Weaver.Examples.TextManager).GetField("StatusText", StaticBindings).SetValue(null, pool);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-        }
-
-#endif
-
-        [UnityEngine.RuntimeInitializeOnLoadMethodAttribute(UnityEngine.RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void OnApplicationStart()
-        {
-#if ! UNITY_EDITOR // Runtime.
-
-            UnityEngine.Application.quitting += SavePrefs;
-            Weaver.PrefAttribute.OnSave += SavePrefs;
-
-            // [Weaver.Pref] Weaver.Examples.Score.HighScore (int).
-            try
-            {
-                var value = UnityEngine.PlayerPrefs.GetInt("Weaver.Examples.Score.HighScore", 0);
-                typeof(Weaver.Examples.Score).GetProperty("HighScore", StaticBindings).SetValue(null, value, null);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-
-#endif
-        }
-
-#if ! UNITY_EDITOR // Runtime.
-
-        private static void SavePrefs()
-        {
-            // [Weaver.Pref] Weaver.Examples.Score.HighScore (int).
-            try
-            {
-                var value = Weaver.Examples.Score.HighScore;
-                UnityEngine.PlayerPrefs.SetInt("Weaver.Examples.Score.HighScore", value);
-            }
-            catch (System.Exception exception) { UnityEngine.Debug.LogException(exception); }
-        }
-
-#endif
-
 #if UNITY_EDITOR // Editor.
 
         /// <summary>This property is here to give a compile error if you delete Weaver so you delete this script as well.</summary>
@@ -141,10 +23,13 @@ namespace Weaver
 
 #endif
 
-#if ! UNITY_EDITOR // Runtime.
+        #region Obsolete Members
+#if UNITY_EDITOR
 
-        private const System.Reflection.BindingFlags StaticBindings = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static;
+        [System.Obsolete("Remove any references to it.")]
+        private static void OnApplicationStart() { throw new System.NotImplementedException("Weaver.Injector.OnApplicationStart is obsolete. Remove any references to it."); }
 
 #endif
+        #endregion
     }
 }
