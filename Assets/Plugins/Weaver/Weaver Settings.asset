@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734acf3ad9828e45afcc09e6471c339, type: 3}
+  m_Name: Weaver Settings
+  m_EditorClassIdentifier: 
+  _Injection:
+    enableRuntimeInjection: 1
+    showProjectWindowOverlays: 1
+    autoFindAssets: 1
+    logAssetFound: 1
+    catchInjectorExceptions: 1
+    timeInjectorCode: 0
+    logInjectorCode: 0
+    _AssetInjectionData:
+    - _DeclaringType: Weaver.Editor.Icons, Weaver
+      _Member: Instance
+      _Asset: {fileID: 11400000, guid: 2d1dfe17301b52f409559e56148e4e2f, type: 2}
+      _GUID: 2d1dfe17301b52f409559e56148e4e2f
+      _LocalID: 11400000
+    - _DeclaringType: Weaver.Editor.Procedural.AnimationConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.BuildDetailsScriptBuilder, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.InjectorScriptBuilder, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.LayerConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.NavigationAreaConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.SceneConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.ShaderConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Editor.Procedural.TagConstants, Weaver
+      _Member: Script
+      _Asset: {fileID: 0}
+      _GUID: 
+      _LocalID: 0
+    - _DeclaringType: Weaver.Examples.Building, Weaver.Examples
+      _Member: ProceduralOfficeBuilding
+      _Asset: {fileID: 114900658891617328, guid: c8a04171fb36694438033083b2eda116, type: 3}
+      _GUID: c8a04171fb36694438033083b2eda116
+      _LocalID: 114900658891617328
+    - _DeclaringType: Weaver.Examples.FrameRate, Weaver.Examples
+      _Member: Instance
+      _Asset: {fileID: 114779580835785978, guid: 2989973c4405a4545a4b32e54f059f6b, type: 3}
+      _GUID: 2989973c4405a4545a4b32e54f059f6b
+      _LocalID: 114779580835785978
+    - _DeclaringType: Weaver.Examples.GameOverScreen, Weaver.Examples
+      _Member: Prefab
+      _Asset: {fileID: 114497314474730160, guid: c5c06adce88301e4487ac6b4a2556933, type: 3}
+      _GUID: c5c06adce88301e4487ac6b4a2556933
+      _LocalID: 114497314474730160
+    - _DeclaringType: Weaver.Examples.Score, Weaver.Examples
+      _Member: Text
+      _Asset: {fileID: 114083981433808054, guid: 6f372a37d87f9c04da4459f35d7d46e8, type: 3}
+      _GUID: 6f372a37d87f9c04da4459f35d7d46e8
+      _LocalID: 114083981433808054
+    - _DeclaringType: Weaver.Examples.TextManager, Weaver.Examples
+      _Member: ColdDamageText
+      _Asset: {fileID: 114602474095319948, guid: 8b11c216bc1a21346938a702d5bee21b, type: 3}
+      _GUID: 8b11c216bc1a21346938a702d5bee21b
+      _LocalID: 114602474095319948
+    - _DeclaringType: Weaver.Examples.TextManager, Weaver.Examples
+      _Member: FireDamageText
+      _Asset: {fileID: 114234925318026988, guid: 171972595bfec46439c91a71c9d3546a, type: 3}
+      _GUID: 171972595bfec46439c91a71c9d3546a
+      _LocalID: 114234925318026988
+    - _DeclaringType: Weaver.Examples.TextManager, Weaver.Examples
+      _Member: PhysicalDamageText
+      _Asset: {fileID: 114320268067301884, guid: 2f059d7f3ca1d2b4aa96df4a7579b59d, type: 3}
+      _GUID: 2f059d7f3ca1d2b4aa96df4a7579b59d
+      _LocalID: 114320268067301884
+    - _DeclaringType: Weaver.Examples.TextManager, Weaver.Examples
+      _Member: SpeechText
+      _Asset: {fileID: 114056778082118178, guid: b8fe9864c0a12024b9e6239acc0168af, type: 3}
+      _GUID: b8fe9864c0a12024b9e6239acc0168af
+      _LocalID: 114056778082118178
+    - _DeclaringType: Weaver.Examples.TextManager, Weaver.Examples
+      _Member: StatusText
+      _Asset: {fileID: 114320268067301884, guid: 8bb77e047aed6174b88d06d10bf7e3e2, type: 3}
+      _GUID: 8bb77e047aed6174b88d06d10bf7e3e2
+      _LocalID: 114320268067301884
+  _ProceduralAssets:
+    includeNamespaceInName: 0
+    checkForMissingAssets: 1
+    autoGenerateOnBuild: 1
+    notifyWhenDeletingOldAssets: 1
+    scriptsUseWeaverNamespace: 1
+    autoGenerateScriptsOnSave: 1
+    notifyWhenGeneratingScripts: 1
+    scriptsKeepObsoleteMembers: 1
+    _OutputDirectory: {fileID: 0}
+    _ProceduralAssetData: []
+    _ProceduralAssetListData: []
+  _Animations:
+    enabled: 0
+    notifyOnNewValue: 1
+    createParameterWrappers: 1
+  _Layers:
+    enabled: 0
+    layerNames:
+    - Default
+    - TransparentFX
+    - Ignore Raycast
+    - Water
+    - UI
+    includeLayers: 1
+    includeLayerMasks: 0
+    includeCollisionMatrix2D: 0
+    includeCollisionMatrix3D: 0
+    customMasks: []
+  _NavAreas:
+    enabled: 0
+    layerNames:
+    - Walkable
+    - Not Walkable
+    - Jump
+    includeLayers: 1
+    includeLayerMasks: 0
+    customMasks: []
+  _Scenes:
+    enabled: 0
+    includeSceneIndices: 0
+    includeSceneNames: 0
+    useFullPathNames: 0
+    useNestedClasses: 0
+  _Shaders:
+    enabled: 0
+    shaders: []
+  _Tags:
+    enabled: 0
+  _Window:
+    currentPanel: 0
+    autoDock: UnityEditor.InspectorWindow
+    autoFocus: 1
+  _Dummy: 0

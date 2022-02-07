@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073f81b86d13eb64a9a64af7a80ada51, type: 3}
+  m_Name: Icons
+  m_EditorClassIdentifier: 
+  _AssetList: {fileID: 2800000, guid: 95ef637804643584c8f1a5b56f2b8b4d, type: 3}
+  _AssetInstance: {fileID: 2800000, guid: f5fba954dc46076448d3a087b06d0863, type: 3}
+  _AssetPool: {fileID: 2800000, guid: 1904404b1721b8e469c7aafcce7227ac, type: 3}
+  _AssetReference: {fileID: 2800000, guid: 2b73a1303596b9c4ea9eed4792f34cff, type: 3}
+  _LazyReference: {fileID: 2800000, guid: 7226608e977dd5b4c9beb3ddb481b36c, type: 3}
+  _Pref: {fileID: 2800000, guid: c1df1cda01019fb438ae37d96d0bf4d8, type: 3}
+  _PotentialTarget: {fileID: 2800000, guid: 295ed3d9ad97789439c0b48839b24690, type: 3}

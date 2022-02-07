@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////
+// Read Me // https://kybernetik.com.au/weaver //
+////////////////////////////////////////////////////////////
+
+The online documentation explains how to use Weaver in detail:
+https://kybernetik.com.au/weaver
+
+The Weaver Window can be opened via 'Window/General/Weaver'.
+
+////////////////////////////////////////////////////////////
+
+To Uninstall Weaver, simply delete:
+
+- Assets/Plugins/Weaver
+- Assets/Procedural Assets
+
+This can be done via the 'Miscellaneous' panel in the Weaver Window.
+
+////////////////////////////////////////////////////////////
