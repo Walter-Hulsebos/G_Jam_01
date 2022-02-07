@@ -10,6 +10,9 @@ public static class Animations
     /// <summary>Shark Swim 1</summary>
     public const int SharkSwim1 = 2079898214;
 
+    /// <summary>Swim</summary>
+    public const int Swim = 780061838;
+
     /// <summary>Get the name of the specified 'state' using HashToString.</summary>
     public static string GetName(this UnityEngine.AnimatorStateInfo state) => HashToString(state.shortNameHash);
 
@@ -19,6 +22,7 @@ public static class Animations
         switch (hash)
         {
             case SharkSwim1: return "Shark Swim 1";
+            case Swim: return "Swim";
             default: return null;
         }
     }
