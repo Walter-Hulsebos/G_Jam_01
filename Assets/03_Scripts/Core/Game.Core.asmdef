@@ -1,0 +1,17 @@
+{
+    "name": "Game.Core",
+    "rootNamespace": "Game.Core",
+    "references": [
+        "Unity.InputSystem",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
