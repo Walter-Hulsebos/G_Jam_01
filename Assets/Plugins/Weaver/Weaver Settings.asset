@@ -33,14 +33,14 @@ MonoBehaviour:
       _LocalID: 0
     - _DeclaringType: Weaver.Editor.Procedural.BuildDetailsScriptBuilder, Weaver
       _Member: Script
-      _Asset: {fileID: 0}
-      _GUID: 
-      _LocalID: 0
+      _Asset: {fileID: 11500000, guid: f6639d6a104a84a41840669d1630df40, type: 3}
+      _GUID: f6639d6a104a84a41840669d1630df40
+      _LocalID: 11500000
     - _DeclaringType: Weaver.Editor.Procedural.InjectorScriptBuilder, Weaver
       _Member: Script
-      _Asset: {fileID: 0}
-      _GUID: 
-      _LocalID: 0
+      _Asset: {fileID: 11500000, guid: cf82345c10ff43e4c96aa10f57419b3a, type: 3}
+      _GUID: cf82345c10ff43e4c96aa10f57419b3a
+      _LocalID: 11500000
     - _DeclaringType: Weaver.Editor.Procedural.LayerConstants, Weaver
       _Member: Script
       _Asset: {fileID: 0}
@@ -121,7 +121,31 @@ MonoBehaviour:
     notifyWhenGeneratingScripts: 1
     scriptsKeepObsoleteMembers: 1
     _OutputDirectory: {fileID: 0}
-    _ProceduralAssetData: []
+    _ProceduralAssetData:
+    - _ReferencedAssetInjectionDataIndex: 1
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 4
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 5
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 6
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 7
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 8
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 2
+      hasSubAssets: 0
+      _DependancyIndices: 
+    - _ReferencedAssetInjectionDataIndex: 3
+      hasSubAssets: 0
+      _DependancyIndices: 
     _ProceduralAssetListData: []
   _Animations:
     enabled: 0

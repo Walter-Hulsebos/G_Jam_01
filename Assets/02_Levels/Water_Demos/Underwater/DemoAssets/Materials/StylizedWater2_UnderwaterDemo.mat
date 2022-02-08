@@ -8,14 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StylizedWater2_UnderwaterDemo
-  m_Shader: {fileID: 4800000, guid: f04c9486b297dd848909db26983c9ddb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 97d819883abaa514984aaeb4e870697d, type: 3}
   m_ShaderKeywords: ADVANCED_LIGHTING _ADVANCED_SHADING _CAUSTICS _DEPTH_TEX _DISTANCE_NORMALS
     _FOAM _NORMALMAP _REFRACTION _SHARP_INERSECTION _SIMPLE_LIGHTING _TRANSLUCENCY
     _UNDERWATER_ENABLED _WAVES _WORLDSPACEUV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -185,17 +185,20 @@ Material:
     - _SunReflectionStrength: 10
     - _Surface: 0
     - _TEXTURE_INTERSECTIONOn: 0
+    - _TessMax: 15
+    - _TessMin: 0
+    - _TessValue: 16
     - _Texture_IntersectionOn: 1
     - _Tiling: 0.5
     - _Translucency: 1
     - _UnderwaterRefractionOffset: 0.3
     - _UnderwaterSurfaceSmoothness: 0.8
-    - _WaveCount: 4
-    - _WaveDistance: 0.801
-    - _WaveHeight: 0.23
-    - _WaveNormalStr: 0.39
-    - _WaveSpeed: 3
-    - _WaveSteepness: 1
+    - _WaveCount: 3
+    - _WaveDistance: 0.82
+    - _WaveHeight: 0.68
+    - _WaveNormalStr: 1
+    - _WaveSpeed: 2.000001
+    - _WaveSteepness: 0.88
     - _WaveTint: 0.0399
     - _WavesOn: 1
     - _WorkflowMode: 1
@@ -203,7 +206,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AnimationParams: {r: -1, g: -1, b: 1, a: 0}
-    - _BaseColor: {r: 0, g: 0.16451614, b: 0.34, a: 0.99215686}
+    - _BaseColor: {r: 0, g: 0.07742355, b: 0.16037738, a: 0.99215686}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DepthMapBounds: {r: -402.3, g: -459.43, b: 0.0012693577, a: 0}
     - _DistanceNormalParams: {r: 0, g: 199.99988, b: 0.176, a: 0}
@@ -219,7 +222,7 @@ Material:
     - _VertexColorMask: {r: 0, g: 0, b: 1, a: 0}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}
-    - _WaveDirection: {r: 1, g: 1, b: 1, a: 1}
+    - _WaveDirection: {r: 2, g: 1, b: 1, a: 1}
     - _WaveFadeDistance: {r: 0.50201416, g: 149.79909, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6498140463000427223
