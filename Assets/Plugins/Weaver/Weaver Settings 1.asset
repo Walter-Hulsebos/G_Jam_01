@@ -140,7 +140,7 @@ MonoBehaviour:
   _Tags:
     enabled: 1
   _Window:
-    currentPanel: -1
+    currentPanel: 4
     autoDock: UnityEditor.InspectorWindow
     autoFocus: 1
   _Dummy: 0

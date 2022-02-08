@@ -1,11 +1,30 @@
 {
   "dependencies": {
+    "com.common-games.utils.extensions": {
+      "version": "https://github.com/Common-Games/Utils.Extensions.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.burst": "1.4.11",
+        "com.unity.test-framework": "1.1.29",
+        "com.unity.test-framework.performance": "2.8.0-preview"
+      },
+      "hash": "30392604b3c3f63f2ecbebadbe92850fd43bdf6d"
+    },
     "com.common-games.utils.scenes": {
       "version": "https://github.com/Walter-Hulsebos/Utils.Scenes.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "1827386322f076c04de3ed05f351deb21956bf31"
+    },
+    "com.common-games.utils.shared": {
+      "version": "https://github.com/Common-Games/Utils.Shared.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3cc549b27d5b606cf9059a6ec87a35d4efa0b8e2"
     },
     "com.unity.addressables": {
       "version": "1.18.19",
@@ -32,7 +51,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.3.4",
+      "version": "1.4.11",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -134,8 +153,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
-      "version": "1.0.3",
-      "depth": 1,
+      "version": "2.0.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -157,6 +176,16 @@
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6",
         "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.test-framework.performance": {
+      "version": "2.8.0-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"

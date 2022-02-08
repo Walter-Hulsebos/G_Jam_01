@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "com.common-games.utils.extensions": "https://github.com/Common-Games/Utils.Extensions.git",
     "com.common-games.utils.scenes": "https://github.com/Walter-Hulsebos/Utils.Scenes.git",
+    "com.common-games.utils.shared": "https://github.com/Common-Games/Utils.Shared.git",
     "com.unity.addressables": "1.18.19",
     "com.unity.animation.rigging": "1.0.3",
     "com.unity.cinemachine": "2.6.11",
@@ -10,6 +12,7 @@
     "com.unity.polybrush": "1.0.2",
     "com.unity.probuilder": "4.5.2",
     "com.unity.render-pipelines.universal": "10.8.1",
+    "com.unity.settings-manager": "2.0.1",
     "com.unity.test-framework": "1.1.30",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.4.8",
