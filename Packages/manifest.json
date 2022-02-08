@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.common-games.utils.scenes": "https://github.com/Walter-Hulsebos/Utils.Scenes.git",
     "com.unity.addressables": "1.18.19",
     "com.unity.animation.rigging": "1.0.3",
     "com.unity.cinemachine": "2.6.11",
