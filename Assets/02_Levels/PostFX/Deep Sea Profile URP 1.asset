@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defe3efb56c1bc943a6bfb504a00dc77, type: 3}
   m_Name: UnderwaterSettings
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   startDistance:
     m_OverrideState: 1
@@ -127,24 +127,24 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 20
   heightFogDepth:
-    m_OverrideState: 0
-    m_Value: 25
+    m_OverrideState: 1
+    m_Value: 100
   heightFogDensity:
     m_OverrideState: 0
     m_Value: 50
   heightFogBrightness:
-    m_OverrideState: 0
-    m_Value: 0.6
+    m_OverrideState: 1
+    m_Value: 0.481
     min: 0
     max: 1
   fogBrightness:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   subsurfaceStrength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   causticsStrength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   distortionStrength:
     m_OverrideState: 0

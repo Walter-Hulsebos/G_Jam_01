@@ -20,7 +20,7 @@ MonoBehaviour:
     allowDistortion: 1
     distortionMode: 1
     directionalCaustics: 0
-    accurateDirectionalCaustics: 0
+    accurateDirectionalCaustics: 1
     waterlineRefraction: 1
 --- !u!114 &11400000
 MonoBehaviour:
