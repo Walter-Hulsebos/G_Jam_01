@@ -31,9 +31,9 @@ namespace UnityTemplateProjects
      ,         ,@        COPYRIGHT Walter Hulsebos              \       @       ,
                                                                         #      ,
     */
-    public class SimpleCameraController : MonoBehaviour
+    public class Swimming : MonoBehaviour
     {
-        class CameraState
+        private class CameraState
         {
             public float yaw;
             public float pitch;
@@ -79,39 +79,43 @@ namespace UnityTemplateProjects
             }
         }
 
-        const float k_MouseSensitivityMultiplier = 0.01f;
+        private const float _MOUSE_SENSITIVITY_MULTIPLIER = 0.01f;
 
-        CameraState m_TargetCameraState = new CameraState();
-        CameraState m_InterpolatingCameraState = new CameraState();
+        private readonly CameraState _targetCameraState = new CameraState();
+        private readonly CameraState _interpolatingCameraState = new CameraState();
 
         [Header("Movement Settings")]
         [Tooltip("Exponential boost factor on translation, controllable by mouse wheel.")]
-        public float boost = 3.5f;
+        [SerializeField] private float boost = 3.5f;
 
         [Tooltip("Time it takes to interpolate camera position 99% of the way to the target."), Range(0.001f, 1f)]
-        public float positionLerpTime = 0.2f;
+        [SerializeField] private float positionLerpTime = 0.2f;
 
         [Header("Rotation Settings")]
         [Tooltip("Multiplier for the sensitivity of the rotation.")]
-        public float mouseSensitivity = 60.0f;
+        [SerializeField] private float mouseSensitivity = 60.0f;
 
         [Tooltip("X = Change in mouse position.\nY = Multiplicative factor for camera rotation.")]
-        public AnimationCurve mouseSensitivityCurve = new AnimationCurve(new Keyframe(0f, 0.5f, 0f, 5f), new Keyframe(1f, 2.5f, 0f, 0f));
+        [SerializeField] private AnimationCurve mouseSensitivityCurve = new AnimationCurve(new Keyframe(0f, 0.5f, 0f, 5f), new Keyframe(1f, 2.5f, 0f, 0f));
 
         [Tooltip("Time it takes to interpolate camera rotation 99% of the way to the target."), Range(0.001f, 1f)]
-        public float rotationLerpTime = 0.01f;
+        [SerializeField] private float rotationLerpTime = 0.01f;
 
         [Tooltip("Whether or not to invert our Y axis for mouse input to rotation.")]
-        public bool invertY = false;
+        [SerializeField] private bool invertY = true;
+
+        [Header("Inputs")] 
+        [SerializeField] private InputActionReference moveInput;
+        [SerializeField] private InputActionReference lookInput;
 
 #if ENABLE_INPUT_SYSTEM
-        InputAction movementAction;
-        InputAction verticalMovementAction;
-        InputAction lookAction;
-        InputAction boostFactorAction;
-        bool        mouseRightButtonPressed;
+        private InputAction movementAction;
+        private InputAction verticalMovementAction;
+        private InputAction lookAction;
+        private InputAction boostFactorAction;
+        private bool        mouseRightButtonPressed;
 
-        void Start()
+        private void Start()
         {
             var map = new InputActionMap("Simple Camera Controller");
 
@@ -146,13 +150,13 @@ namespace UnityTemplateProjects
         }
 #endif
 
-        void OnEnable()
+        private void OnEnable()
         {
-            m_TargetCameraState.SetFromTransform(transform);
-            m_InterpolatingCameraState.SetFromTransform(transform);
+            _targetCameraState.SetFromTransform(transform);
+            _interpolatingCameraState.SetFromTransform(transform);
         }
 
-        Vector3 GetInputTranslationDirection()
+        private Vector3 GetInputTranslationDirection()
         {
             Vector3 direction = Vector3.zero;
 #if ENABLE_INPUT_SYSTEM
@@ -188,8 +192,8 @@ namespace UnityTemplateProjects
 #endif
             return direction;
         }
-        
-        void Update()
+
+        private void Update()
         {
             // Exit Sample  
 
@@ -217,14 +221,14 @@ namespace UnityTemplateProjects
             // Rotation
             if (IsCameraRotationAllowed())
             {
-                var mouseMovement = GetInputLookRotation() * k_MouseSensitivityMultiplier * mouseSensitivity;
+                var mouseMovement = GetInputLookRotation() * _MOUSE_SENSITIVITY_MULTIPLIER * mouseSensitivity;
                 if (invertY)
                     mouseMovement.y = -mouseMovement.y;
                 
                 var mouseSensitivityFactor = mouseSensitivityCurve.Evaluate(mouseMovement.magnitude);
 
-                m_TargetCameraState.yaw += mouseMovement.x * mouseSensitivityFactor;
-                m_TargetCameraState.pitch += mouseMovement.y * mouseSensitivityFactor;
+                _targetCameraState.yaw += mouseMovement.x * mouseSensitivityFactor;
+                _targetCameraState.pitch += mouseMovement.y * mouseSensitivityFactor;
             }
             
             // Translation
@@ -240,18 +244,18 @@ namespace UnityTemplateProjects
             boost += GetBoostFactor();
             translation *= Mathf.Pow(2.0f, boost);
 
-            m_TargetCameraState.Translate(translation);
+            _targetCameraState.Translate(translation);
 
             // Framerate-independent interpolation
             // Calculate the lerp amount, such that we get 99% of the way to our target in the specified time
             var positionLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / positionLerpTime) * Time.deltaTime);
             var rotationLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / rotationLerpTime) * Time.deltaTime);
-            m_InterpolatingCameraState.LerpTowards(m_TargetCameraState, positionLerpPct, rotationLerpPct);
+            _interpolatingCameraState.LerpTowards(_targetCameraState, positionLerpPct, rotationLerpPct);
 
-            m_InterpolatingCameraState.UpdateTransform(transform);
+            _interpolatingCameraState.UpdateTransform(transform);
         }
 
-        float GetBoostFactor()
+        private float GetBoostFactor()
         {
 #if ENABLE_INPUT_SYSTEM
             return boostFactorAction.ReadValue<Vector2>().y * 0.01f;
@@ -260,7 +264,7 @@ namespace UnityTemplateProjects
 #endif
         }
 
-        Vector2 GetInputLookRotation()
+        private Vector2 GetInputLookRotation()
         {
             // try to compensate the diff between the two input systems by multiplying with empirical values
 #if ENABLE_INPUT_SYSTEM
@@ -273,7 +277,7 @@ namespace UnityTemplateProjects
 #endif
         }
 
-        bool IsBoostPressed()
+        private bool IsBoostPressed()
         {
 #if ENABLE_INPUT_SYSTEM
             bool boost = Keyboard.current != null ? Keyboard.current.leftShiftKey.isPressed : false; 
@@ -285,7 +289,7 @@ namespace UnityTemplateProjects
 
         }
 
-        bool IsEscapePressed()
+        private bool IsEscapePressed()
         {
 #if ENABLE_INPUT_SYSTEM
             return Keyboard.current != null ? Keyboard.current.escapeKey.isPressed : false; 
@@ -294,7 +298,7 @@ namespace UnityTemplateProjects
 #endif
         }
 
-        bool IsCameraRotationAllowed()
+        private bool IsCameraRotationAllowed()
         {
 #if ENABLE_INPUT_SYSTEM
             bool canRotate = Mouse.current != null ? Mouse.current.rightButton.isPressed : false;
@@ -305,7 +309,7 @@ namespace UnityTemplateProjects
 #endif
         }
 
-        bool IsRightMouseButtonDown()
+        private bool IsRightMouseButtonDown()
         {
 #if ENABLE_INPUT_SYSTEM
             return Mouse.current != null ? Mouse.current.rightButton.isPressed : false;
@@ -314,7 +318,7 @@ namespace UnityTemplateProjects
 #endif
         }
 
-        bool IsRightMouseButtonUp()
+        private bool IsRightMouseButtonUp()
         {
 #if ENABLE_INPUT_SYSTEM
             return Mouse.current != null ? !Mouse.current.rightButton.isPressed : false;

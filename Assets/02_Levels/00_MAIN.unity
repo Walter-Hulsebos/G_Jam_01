@@ -271,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232415436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 14}
+  m_LocalPosition: {x: 34, y: 0, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 339742643}
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367806572}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
   m_Name: 
@@ -630,6 +630,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 62.951, y: -30, z: 0}
+--- !u!114 &812810889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: defe3efb56c1bc943a6bfb504a00dc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  startDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 20
+  heightFogDepth:
+    m_OverrideState: 1
+    m_Value: 100
+  heightFogDensity:
+    m_OverrideState: 0
+    m_Value: 50
+  heightFogBrightness:
+    m_OverrideState: 1
+    m_Value: 0.481
+    min: 0
+    max: 1
+  fogBrightness:
+    m_OverrideState: 1
+    m_Value: 1
+  subsurfaceStrength:
+    m_OverrideState: 1
+    m_Value: 1
+  causticsStrength:
+    m_OverrideState: 1
+    m_Value: 1
+  distortionStrength:
+    m_OverrideState: 0
+    m_Value: 0.25
+    min: 0
+    max: 1
+  distortionFrequency:
+    m_OverrideState: 0
+    m_Value: 0.75
+    min: 0
+    max: 1
+  distortionSpeed:
+    m_OverrideState: 0
+    m_Value: 0.5
+    min: 0
+    max: 1
 --- !u!1 &925078923
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925078923}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 959dc65f30d3a9a459001966445bf24c, type: 3}
   m_Name: 
@@ -1019,7 +1074,7 @@ MonoBehaviour:
   waterLevelTransform: {fileID: 232415438}
   waterMaterial: {fileID: 2100000, guid: 35027ffa3123a9549bb75189aa589910, type: 2}
   dynamicMaterial: 0
-  settings: {fileID: 1841292396}
+  settings: {fileID: 812810889}
   useVolumeBlending: 1
   startDistance: 0
   fogDensity: 20
@@ -1050,61 +1105,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1841292396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defe3efb56c1bc943a6bfb504a00dc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  startDistance:
-    m_OverrideState: 1
-    m_Value: 0
-  fogDensity:
-    m_OverrideState: 1
-    m_Value: 20
-  heightFogDepth:
-    m_OverrideState: 1
-    m_Value: 100
-  heightFogDensity:
-    m_OverrideState: 0
-    m_Value: 50
-  heightFogBrightness:
-    m_OverrideState: 1
-    m_Value: 0.481
-    min: 0
-    max: 1
-  fogBrightness:
-    m_OverrideState: 1
-    m_Value: 1
-  subsurfaceStrength:
-    m_OverrideState: 1
-    m_Value: 1
-  causticsStrength:
-    m_OverrideState: 1
-    m_Value: 1
-  distortionStrength:
-    m_OverrideState: 0
-    m_Value: 0.25
-    min: 0
-    max: 1
-  distortionFrequency:
-    m_OverrideState: 0
-    m_Value: 0.75
-    min: 0
-    max: 1
-  distortionSpeed:
-    m_OverrideState: 0
-    m_Value: 0.5
-    min: 0
-    max: 1
 --- !u!1 &1903317459
 GameObject:
   m_ObjectHideFlags: 0
